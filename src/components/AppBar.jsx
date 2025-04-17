@@ -1,26 +1,37 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { assets } from '../assets/assets'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { IoSunnyOutline } from "react-icons/io5";
 import { IoMoonOutline } from "react-icons/io5";
+import { useDispatch, useSelector } from 'react-redux';
+import { switchTheme } from '../redux/actions/theme';
 
 
 function AppBar() {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const { isDarkMode } = useSelector((state) => state.theme);
     let [isLogedIn, setIsLogedIn] = useState(false)
-    const [dark, setDark] = useState(false);
 
     const darkModeHandler = () => {
-        setDark(!dark);
-        document.body.classList.toggle("dark");
+        dispatch(switchTheme(!isDarkMode))
     }
+    
+    useEffect(() => {
+        if (isDarkMode) {
+          document.body.classList.add('dark');
+        } else {
+          document.body.classList.remove('dark');
+        }
+    }, [isDarkMode]);
+
   return (
     <div className='hidden md:flex justify-between items-center py-5 px-4 sm:px-[10%] absolute inset-x-0 top-0 z-50'>
         <div>
             <img className="" src={assets.logo} alt='app_logo'/>
         </div>
         <div>
-            <ul className='flex gap-3 font-semibold text-gray-800 dark:text-white'>
+            <ul className={`flex gap-3 font-semibold text-gray-800 dark:text-white`}>
                 <NavLink to={'/'} className='custom-navLink'>
                     <li>Home</li>
                     <hr className='hidden text-blue-400'/>
@@ -34,10 +45,10 @@ function AppBar() {
         <div className='flex gap-4'>
             <button onClick={()=> darkModeHandler()}>
                 {
-                    dark && < IoSunnyOutline className='text-yellow-300 text-2xl'/>
+                    isDarkMode && < IoSunnyOutline className='text-yellow-300 text-2xl'/>
                 }
                 {
-                    !dark && <IoMoonOutline className='text-gray-800 text-2xl'/>
+                    !isDarkMode && <IoMoonOutline className='text-gray-800 text-2xl'/>
                 }
             </button>
             {
