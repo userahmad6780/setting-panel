@@ -1,7 +1,8 @@
-import { LOGIN, LOGOUT, UPDATE_USER } from "../actions/auth";
+import { LOGIN, LOGOUT, UPDATE_NOTIFICATION, UPDATE_USER } from "../actions/auth";
 
 const initialState = {
-    user: null
+    user: null,
+    isNotificationEnabled: true
   };
   
   export const authReducer = (state = initialState, action) => {
@@ -16,6 +17,11 @@ const initialState = {
             ...state,
             user: action.payload
         };
+      case UPDATE_NOTIFICATION:
+        return{
+          ...state,
+          isNotificationEnabled: action.payload
+        }
       case LOGOUT:
         return {
             ...state,

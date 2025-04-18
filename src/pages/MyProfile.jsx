@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { assets } from '../assets/assets'
 import { useDispatch, useSelector } from 'react-redux';
-import { updateUser } from '../redux/actions/auth';
+import { updateNotification, updateUser } from '../redux/actions/auth';
 import { useTranslation } from 'react-i18next';
-import { customToastify } from '../utils';
 import { ToastContainer } from 'react-toastify';
+import useToast from '../customHooks/useToast';
 
 const MyProfile = () => {
   const { t } = useTranslation();
-  const { user } = useSelector((state) => state.userAuth);
+  const customToastify = useToast()
+  const { user, isNotificationEnabled } = useSelector((state) => state.userAuth);
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [isEdit, setIsEdit] = useState(false);
@@ -19,6 +20,10 @@ const MyProfile = () => {
       dispatch(updateUser({name}))
       customToastify(t('profile_updated'))
     }
+  }
+
+  const handleNotification = (val) =>{
+    dispatch(updateNotification(val))
   }
 
   useEffect(()=>{
@@ -65,6 +70,12 @@ const MyProfile = () => {
             <p className='text-gray-500 text-sm pb-2'>{t('not_selected')}</p>
           </div>
         </div>
+
+        <label className="flex items-center cursor-pointer pt-3">
+          <span className="mr-3 text-gray-700 dark:text-white font-medium">{t('enable_notification')}</span>
+          <input type="checkbox" checked={isNotificationEnabled} onChange={()=>{handleNotification(!isNotificationEnabled)}} />
+        </label>
+
         <div className='mt-10'>
           <button onClick={()=>{handleEdit()}} className='border-1 mr-3 text-sm rounded-full text-gray-600 border-indigo-600 w-max py-2 px-6 mb-2 dark:text-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600 cursor-pointer'>
             {!isEdit ? t('edit') : t('save_information')}

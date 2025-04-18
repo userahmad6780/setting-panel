@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { customToastify } from '../utils';
 import { useTranslation } from 'react-i18next';
 import { addToCart, removeFromCart, updateTotal } from '../redux/actions/products';
+import useToast from './useToast';
 
 function useCart() {
     const dispatch = useDispatch();
     const { t } = useTranslation();
+    const customToastify = useToast()
     const { cartItems, subTotal } = useSelector((state) => state.cartProducts);
 
     function handleRemoveCartItem(selectedItem){
