@@ -18,12 +18,13 @@
 
     "contact_information" : "CONTACT INFOTMATION",
     "basic_information" : "BASIC INFOMATION",
+    "profile_updated" : "Profile updated successfully",
 
     "gender" : "Gender",
     "birthday" : "Birthday",
     "not_selected" : "Not Selected",
     "my_profile" : "My Profile",
-    "edit" : "edit",
+    "edit" : "Edit",
     "save_information" : "Save information",
 
     "home__read_more_title": "Dive into a world where imagination meets innovation",
@@ -45,6 +46,8 @@
 
     "empty_cart": "Products not found",
     "empty_cart_description": "Add items to cart for purchase",
+    "added_to_cart": "Item added to cart",
+    "removed_from_cart": "Item removed from cart",
 
     "subtotal": "Subtotal",
     "subtotal_description": "Shipping and taxes calculated at checkout.",

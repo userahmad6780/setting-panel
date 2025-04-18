@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next';
-import { assets, nfts } from '../assets/assets'
+import { assets } from '../assets/assets'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { IoSunnyOutline } from "react-icons/io5";
 import { IoMoonOutline } from "react-icons/io5";
@@ -98,7 +98,9 @@ function AppBar() {
                 </div>    :
                 <div className='relative group'>
                     <div className='flex items-center '>
-                        <img src={assets.profile_pic} alt={assets.profile_pic} className='w-10 rounded-full mr-2'/>
+                        <div class="w-10 h-10 rounded-full dark:bg-gray-300 bg-gray-600 text-white dark:text-gray-600 flex items-center justify-center font-semibold uppercase mr-2">
+                            {user.name[0]}
+                        </div>
                         <img src={assets.dropdown_icon} alt={assets.dropdown_icon} className='w-3'/>
                     </div>
                     <div className='absolute right-0 top-0 pt-12 z-1'>

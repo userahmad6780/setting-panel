@@ -8,7 +8,7 @@ const Login = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch()
   const navigate = useNavigate();
-  const [name, setName] = useState('DigitalWold')
+  const [name, setName] = useState('DigitalWorld')
   const [password, setPassword] = useState('1234')
   const handleLogin = (event)=>{
     event.preventDefault()

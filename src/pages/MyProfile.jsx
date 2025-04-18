@@ -3,6 +3,8 @@ import { assets } from '../assets/assets'
 import { useDispatch, useSelector } from 'react-redux';
 import { updateUser } from '../redux/actions/auth';
 import { useTranslation } from 'react-i18next';
+import { customToastify } from '../utils';
+import { ToastContainer } from 'react-toastify';
 
 const MyProfile = () => {
   const { t } = useTranslation();
@@ -13,7 +15,10 @@ const MyProfile = () => {
 
   const handleEdit = (e) => {
     setIsEdit(!isEdit)
-    dispatch(updateUser({name}))
+    if(name !== user.name){
+      dispatch(updateUser({name}))
+      customToastify(t('profile_updated'))
+    }
   }
 
   useEffect(()=>{
@@ -65,6 +70,7 @@ const MyProfile = () => {
             {!isEdit ? t('edit') : t('save_information')}
           </button>
         </div>
+        <ToastContainer position="bottom-right"/>
       </div>
     </div>
   )

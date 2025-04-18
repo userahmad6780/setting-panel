@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react'
+import { ToastContainer } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart, updateTotal } from '../redux/actions/products';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { customToastify } from '../utils';
 
 function Cart() {
   const navigate = useNavigate();
@@ -15,6 +17,7 @@ function Cart() {
     let totalAmount = subTotal - selectedItem.price
     dispatch(updateTotal(totalAmount))
     dispatch(removeFromCart(filteredItems))
+    customToastify(t('removed_from_cart'))
   }
 
   return (
@@ -98,6 +101,7 @@ function Cart() {
     
             </div>
         }
+        <ToastContainer position="bottom-right"/>
       </div>
     </div>
   )
