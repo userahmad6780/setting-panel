@@ -7,6 +7,23 @@
 
     "signUp": "Sign Up",
     "signIn": "Sign In",
+    "signIn_description" : "Sign in to your account",
+    "logout" : "Logout",
+
+    "name": "Name",
+    "password": "Password",
+    "forgot_password" : "Forgot password?",
+    "create_new_description" : "Create and new account?",
+    "click_here" : "Click here",
+
+    "contact_information" : "CONTACT INFOTMATION",
+    "basic_information" : "BASIC INFOMATION",
+
+    "gender" : "Gender",
+    "birthday" : "Birthday",
+    "not_selected" : "Not Selected",
+    "my_profile" : "My Profile",
+    "edit" : "edit",
 
     "home__read_more_title": "Dive into a world where imagination meets innovation",
     "home__read_more": "Read more",

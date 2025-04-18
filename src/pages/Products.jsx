@@ -37,7 +37,7 @@ const Products = () => {
               <div className='flex justify-between items-baseline-last'>
                 <div>
                   <h3 className="mt-4 text-sm text-gray-700 dark:text-gray-400">{nft.name}</h3>
-                  <p className="mt-1 text-lg font-medium text-gray-900 dark:text-white">{nft.price}</p>
+                  <p className="mt-1 text-lg font-medium text-gray-900 dark:text-white">${nft.price}</p>
                 </div>
                 {
                   cartItems.some(item=> item._id === nft._id) ?

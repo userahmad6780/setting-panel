@@ -8,14 +8,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { switchTheme } from '../redux/actions/theme';
 import { switchLanguage } from '../redux/actions/language';
 import { FiShoppingCart } from "react-icons/fi";
+import { logout } from '../redux/actions/auth';
 
 function AppBar() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const { isDarkMode } = useSelector((state) => state.theme);
     const { currentLanguage } = useSelector((state) => state.appLanguage);
-    const { cartItems, subTotal } = useSelector((state) => state.cartProducts);
-    let [isLogedIn, setIsLogedIn] = useState(false)
+    const { cartItems } = useSelector((state) => state.cartProducts);
+    const { user } = useSelector((state) => state.userAuth);
 
     const darkModeHandler = () => {
         dispatch(switchTheme(!isDarkMode))
@@ -56,7 +57,7 @@ function AppBar() {
                 </NavLink>
             </ul>
         </div>
-        <div className='flex gap-4'>
+        <div className='flex gap-6'>
             <div className='relative group flex justify-center cursor-pointer'>
                 <div className='flex items-center justify-center gap-2 text-gray-800 dark:text-white'>
                     <img src={currentLanguage == 'de' ? assets.german_flg_icon : assets.uk_flg_icon} className="w-5 h-5 rounded-full" />
@@ -91,20 +92,19 @@ function AppBar() {
                 </div>
             }
             {
-                !isLogedIn ?
+                !user ?
                 <div className='cursor-pointer py-2 px-3 bg-indigo-600 rounded-md' onClick={()=>{navigate('/login')}}>
-                    <p className='text-gray-50'>{t('signUp')}</p>
+                    <p className='text-gray-50'>{t('signIn')}</p>
                 </div>    :
                 <div className='relative group'>
                     <div className='flex items-center '>
                         <img src={assets.profile_pic} alt={assets.profile_pic} className='w-10 rounded-full mr-2'/>
                         <img src={assets.dropdown_icon} alt={assets.dropdown_icon} className='w-3'/>
                     </div>
-                    <div className='absolute right-0 top-0 pt-18 z-1'>
+                    <div className='absolute right-0 top-0 pt-12 z-1'>
                         <div className='hidden w-max group-hover:flex flex-col rounded-md bg-gray-100 py-2 px-4'>
-                            <p className='text-md py-2 hover:text-gray-600 cursor-pointer' onClick={()=>navigate('/myProfile')}>My Profile</p>
-                            <p className='text-md py-2 hover:text-gray-600 cursor-pointer' onClick={()=>navigate('/myAppointment')}>My Appointment</p>
-                            <p className='text-md py-2 hover:text-gray-600 cursor-pointer' onClick={()=>console.log('do some thing')}>Logout</p>
+                            <p className='text-md py-2 hover:text-gray-600 cursor-pointer' onClick={()=>navigate('/myProfile')}>{t('my_profile')}</p>
+                            <p className='text-md py-2 hover:text-gray-600 cursor-pointer' onClick={()=>dispatch(logout())}>{t('logout')}</p>
                         </div>
                     </div>
                 </div>

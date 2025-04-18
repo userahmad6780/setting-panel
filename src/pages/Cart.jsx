@@ -38,7 +38,7 @@ function Cart() {
                         <span aria-hidden="true"> &rarr;</span>
                 </button>
             </div> :
-            <div className="flex h-full flex-col bg-white shadow-xl">
+            <div className="flex h-full flex-col bg-white dark:bg-slate-800 shadow-xl">
         
                 <ul role="list" className="-my-6 divide-y divide-gray-200 overflow-y-auto px-4 py-6 sm:px-6">
                     {cartItems.map((item) => (
@@ -48,11 +48,11 @@ function Cart() {
                             </div>
     
                             <div className="ml-4 flex flex-1 flex-col">
-                                <div className="flex justify-between text-base font-medium text-gray-900">
+                                <div className="flex justify-between text-base font-medium text-gray-900 dark:text-white">
                                     <h3>
                                         <p>{item.name}</p>
                                     </h3>
-                                    <p className="ml-4">{item.price}</p>
+                                    <p className="ml-4">${item.price}</p>
                                 </div>
                                 <div className="flex flex-1 items-end justify-between text-sm">
                                     <p className="text-gray-500">Qty 1</p>
@@ -68,9 +68,9 @@ function Cart() {
                 </ul>
     
                 <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-                    <div className="flex justify-between text-base font-medium text-gray-900">
-                        <p>{t('subtotal')}</p>
-                        <p>${subTotal}</p>
+                    <div className="flex justify-between text-base font-medium text-gray-900 dark:text-white">
+                            <p>{t('subtotal')}</p>
+                            <p>${subTotal}</p>
                         </div>
                         <p className="mt-0.5 text-sm text-gray-500">{t('subtotal_description')}</p>
                         <div className="mt-6">
