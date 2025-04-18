@@ -1,0 +1,58 @@
+{
+    "home": "Home",
+    "products": "Products",
+    "about_us": "About us",
+    "contact_us": "Contact us",
+    "privacy_policy": "Privacy policy",
+
+    "signUp": "Sign Up",
+    "signIn": "Sign In",
+    "signIn_description" : "Sign in to your account",
+    "logout" : "Logout",
+
+    "name": "Name",
+    "password": "Password",
+    "forgot_password" : "Forgot password?",
+    "create_new_description" : "Create and new account?",
+    "click_here" : "Click here",
+
+    "contact_information" : "CONTACT INFOTMATION",
+    "basic_information" : "BASIC INFOMATION",
+    "profile_updated" : "Profile updated successfully",
+
+    "gender" : "Gender",
+    "birthday" : "Birthday",
+    "not_selected" : "Not Selected",
+    "my_profile" : "My Profile",
+    "edit" : "Edit",
+    "enable_notification" : "Enable notification",
+    "save_information" : "Save information",
+
+    "home__read_more_title": "Dive into a world where imagination meets innovation",
+    "home__read_more": "Read more",
+    "home__title": "Catch the Wave of Digital Artistry",
+    "home__subHeading": "Transform your creativity into digital collectibles Share your vision with a global audience Step into the future become an NFT.",
+
+    "get_started": "Get started",
+    "learn_more": "Learn more",
+
+    "footer_description": "NFTs empower artists and creators to own, sell, and share their digital work like never before each token is a one-of-a-kind asset, secured on the blockchain from art and music to moments and memes, anything can become an NFT join the revolution and turn your creativity into lasting value.",
+    "footer_company": "COMPANY",
+    "footer_get_in_touch": "GET IN TOUCH",
+
+    "info_number": "+92842492349230",
+    "info_email": "prescripto@gmail.com",
+
+    "remove": "Remove",
+
+    "empty_cart": "Products not found",
+    "empty_cart_description": "Add items to cart for purchase",
+    "added_to_cart": "Item added to cart",
+    "removed_from_cart": "Item removed from cart",
+
+    "subtotal": "Subtotal",
+    "subtotal_description": "Shipping and taxes calculated at checkout.",
+
+    "checkout": "Checkout",
+    "continue": "Continue Shoping"
+}
