@@ -1,9 +1,7 @@
-# React + Vite
+# 🚀 Settings Panel with Theme, Multi-Language support & Cart System
 
-🚀 Project Title
-    - Setting-Panel
+📦 Tech Stack
 
-🛠️ Technologies Used
     - React
     - Redux
     - Redux Persist
@@ -15,7 +13,9 @@
 
 📄 Project Description
 
-    Setting-Panel is a modern React-based Single Page Application (SPA) that allows users to customize the application’s appearance and language preferences based on their needs. The app supports theme toggling, language switching, and features a complete cart flow along with a customizable notification system.
+    Setting-Panel is a modern React-based Single Page Application (SPA) that allows users to customize
+    the application’s appearance and language preferences based on their needs. The app supports theme toggling,
+    language switching, and features a complete cart flow along with a customizable notification system.
 
 🔄 App Workflow
 
@@ -60,5 +60,10 @@
    npm install
 
 2. Run App:
-
+    
+    ```bash
     npm run dev
+
+![Screenshot from 2025-04-18 21-08-43](https://github.com/user-attachments/assets/8e82ef6d-d755-4e32-a1dd-99a44d635c83)
+![Screenshot from 2025-04-18 21-08-58](https://github.com/user-attachments/assets/f479a17a-528e-460d-97b5-7bf9d140f546)
+![Screenshot from 2025-04-18 21-09-09](https://github.com/user-attachments/assets/e5cb26d5-7a74-49a3-a53a-43f5d553f3fb)
