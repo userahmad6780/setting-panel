@@ -7,16 +7,34 @@
   
     "signUp": "Registrieren",
     "signIn": "Anmelden",
+    "signIn_description": "Melden Sie sich bei Ihrem Konto an",
+    "logout": "Abmelden",
   
-    "home__read_more_title": "Tauche ein in eine Welt, in der Fantasie auf Innovation trifft",
+    "name": "Name",
+    "password": "Passwort",
+    "forgot_password": "Passwort vergessen?",
+    "create_new_description": "Neues Konto erstellen?",
+    "click_here": "Klicken Sie hier",
+  
+    "contact_information": "KONTAKTINFORMATIONEN",
+    "basic_information": "GRUNDBEITRÄGE",
+  
+    "gender": "Geschlecht",
+    "birthday": "Geburtstag",
+    "not_selected": "Nicht ausgewählt",
+    "my_profile": "Mein Profil",
+    "edit": "Bearbeiten",
+    "save_information": "Informationen speichern",
+  
+    "home__read_more_title": "Tauchen Sie ein in eine Welt, in der Fantasie auf Innovation trifft",
     "home__read_more": "Mehr erfahren",
-    "home__title": "Erlebe die Welle digitaler Kunstfertigkeit",
-    "home__subHeading": "Verwandle deine Kreativität in digitale Sammlerstücke, teile deine Vision mit einem globalen Publikum, trete in die Zukunft ein – werde ein NFT.",
+    "home__title": "Erleben Sie die Welle digitaler Kunstfertigkeit",
+    "home__subHeading": "Verwandeln Sie Ihre Kreativität in digitale Sammlerstücke, teilen Sie Ihre Vision mit einem globalen Publikum, treten Sie in die Zukunft ein – werden Sie ein NFT.",
   
     "get_started": "Jetzt starten",
     "learn_more": "Mehr erfahren",
   
-    "footer_description": "NFTs ermöglichen es Künstlern und Kreativen, ihre digitalen Werke wie nie zuvor zu besitzen, zu verkaufen und zu teilen. Jeder Token ist ein einzigartiges Asset, gesichert auf der Blockchain. Von Kunst und Musik bis hin zu Momenten und Memes – alles kann ein NFT werden. Schließe dich der Revolution an und verwandle deine Kreativität in bleibenden Wert.",
+    "footer_description": "NFTs ermöglichen es Künstlern und Kreativen, ihre digitalen Werke wie nie zuvor zu besitzen, zu verkaufen und zu teilen. Jeder Token ist ein einzigartiges Asset, gesichert auf der Blockchain. Von Kunst und Musik bis hin zu Momenten und Memes – alles kann ein NFT werden. Schließen Sie sich der Revolution an und verwandeln Sie Ihre Kreativität in bleibenden Wert.",
     "footer_company": "UNTERNEHMEN",
     "footer_get_in_touch": "KONTAKTIERE UNS",
   
@@ -26,12 +44,11 @@
     "remove": "Entfernen",
   
     "empty_cart": "Produkte nicht gefunden",
-    "empty_cart_description": "Füge Artikel zum Warenkorb hinzu, um sie zu kaufen",
+    "empty_cart_description": "Fügen Sie Artikel zum Warenkorb hinzu, um sie zu kaufen",
   
     "subtotal": "Zwischensumme",
     "subtotal_description": "Versandkosten und Steuern werden an der Kasse berechnet.",
   
     "checkout": "Zur Kasse",
     "continue": "Weiter einkaufen"
-}
-  
+  }  

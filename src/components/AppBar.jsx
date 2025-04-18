@@ -49,11 +49,11 @@ function AppBar() {
             <ul className={`flex gap-3 font-semibold text-gray-800 dark:text-white`}>
                 <NavLink to={'/'} className='custom-navLink'>
                     <li>{t('home')}</li>
-                    <hr className='hidden text-blue-400'/>
+                    <hr className='hidden text-indigo-600 dark:text-white'/>
                 </NavLink>
                 <NavLink to={'/products'} className='custom-navLink'>
                     <li>{t('products')}</li>
-                    <hr className='hidden text-blue-400'/>
+                    <hr className='hidden text-indigo-600 dark:text-white'/>
                 </NavLink>
             </ul>
         </div>

@@ -62,7 +62,7 @@ const MyProfile = () => {
         </div>
         <div className='mt-10'>
           <button onClick={()=>{handleEdit()}} className='border-1 mr-3 text-sm rounded-full text-gray-600 border-indigo-600 w-max py-2 px-6 mb-2 dark:text-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600 cursor-pointer'>
-            {!isEdit ? 'Edit' : 'Save information'}
+            {!isEdit ? t('edit') : t('save_information')}
           </button>
         </div>
       </div>
