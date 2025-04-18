@@ -3,6 +3,7 @@ import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { themeReducer } from './reducers/theme';
 import { languageReducer } from './reducers/language';
+import { productReducer } from './reducers/products';
 
 const persistConfig = {
   key: 'root',
@@ -12,6 +13,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   theme: themeReducer,
   appLanguage: languageReducer,
+  cartProducts: productReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

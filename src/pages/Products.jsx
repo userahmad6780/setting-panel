@@ -1,8 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { nfts } from '../assets/assets'
 import { FiShoppingCart } from "react-icons/fi";
+import { MdOutlineRemoveShoppingCart } from "react-icons/md";
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart, removeFromCart, updateTotal } from '../redux/actions/products';
 
 const Products = () => {
+  const dispatch = useDispatch()
+  const { cartItems, subTotal } = useSelector((state) => state.cartProducts);
+
+  function handleAddToCart(item){
+    let totalAmount = subTotal + item.price
+    dispatch(updateTotal(totalAmount))
+    dispatch(addToCart(item))
+    console.log(item, 'local ---------- current item')
+  }
+
+  function handleRemoveCartItem(selectedItem){
+      let filteredItems = cartItems.filter(item=> item._id !== selectedItem._id)
+      let totalAmount = subTotal - selectedItem.price
+      dispatch(updateTotal(totalAmount))
+      dispatch(removeFromCart(filteredItems))
+  }
+
+  useEffect(()=>{
+    console.log(cartItems, 'reducer --------- item')
+  },[cartItems])
+
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">
       <div className="mx-auto max-w-6xl pt-16 sm:pt-20 lg:pt-36">
@@ -20,7 +44,11 @@ const Products = () => {
                   <h3 className="mt-4 text-sm text-gray-700 dark:text-gray-400">{nft.name}</h3>
                   <p className="mt-1 text-lg font-medium text-gray-900 dark:text-white">{nft.price}</p>
                 </div>
-                <FiShoppingCart className='text-lg dark:text-white'/>
+                {
+                  cartItems.some(item=> item._id === nft._id) ?
+                    <MdOutlineRemoveShoppingCart className='text-lg text-red-500 dark:text-white cursor-pointer' onClick={()=>{handleRemoveCartItem(nft)}}/> :
+                    <FiShoppingCart className='text-lg dark:text-white cursor-pointer' onClick={()=>{handleAddToCart(nft)}}/>
+                }
               </div>
             </div>
           ))}
