@@ -1,24 +1,15 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { ToastContainer } from 'react-toastify';
-import { useDispatch, useSelector } from 'react-redux';
-import { removeFromCart, updateTotal } from '../redux/actions/products';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { customToastify } from '../utils';
+import useCart from '../customHooks/useCart';
 
 function Cart() {
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const { handleRemoveCartItem } = useCart();
   const { cartItems, subTotal } = useSelector((state) => state.cartProducts);
   const { t } = useTranslation();
-
-  function handleRemoveCartItem(selectedItem){
-    let filteredItems = cartItems.filter(item=> item._id !== selectedItem._id)
-    let totalAmount = subTotal - selectedItem.price
-    dispatch(updateTotal(totalAmount))
-    dispatch(removeFromCart(filteredItems))
-    customToastify(t('removed_from_cart'))
-  }
 
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">

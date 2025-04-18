@@ -3,30 +3,12 @@ import { nfts } from '../assets/assets';
 import { ToastContainer } from 'react-toastify';
 import { FiShoppingCart } from "react-icons/fi";
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
-import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, removeFromCart, updateTotal } from '../redux/actions/products';
-import { customToastify } from '../utils';
-import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+import useCart from '../customHooks/useCart';
 
 const Products = () => {
-  const dispatch = useDispatch()
-  const { t } = useTranslation();
-  const { cartItems, subTotal } = useSelector((state) => state.cartProducts);
-
-  function handleAddToCart(item){
-    let totalAmount = subTotal + item.price
-    dispatch(updateTotal(totalAmount))
-    dispatch(addToCart(item))
-    customToastify(t('added_to_cart'))
-  }
-
-  function handleRemoveCartItem(selectedItem){
-    let filteredItems = cartItems.filter(item=> item._id !== selectedItem._id)
-    let totalAmount = subTotal - selectedItem.price
-    dispatch(updateTotal(totalAmount))
-    dispatch(removeFromCart(filteredItems))
-    customToastify(t('removed_from_cart'))
-  }
+  const { handleAddToCart, handleRemoveCartItem } = useCart();
+  const { cartItems } = useSelector((state) => state.cartProducts);
 
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">

@@ -6,10 +6,11 @@ import { useDispatch } from 'react-redux';
 
 const Login = () => {
   const { t } = useTranslation();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [name, setName] = useState('DigitalWorld')
-  const [password, setPassword] = useState('1234')
+  const [name, setName] = useState('DigitalWorld');
+  const [password, setPassword] = useState('1234');
+
   const handleLogin = (event)=>{
     event.preventDefault()
     if(name && password){

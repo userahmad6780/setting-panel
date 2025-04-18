@@ -98,7 +98,7 @@ function AppBar() {
                 </div>    :
                 <div className='relative group'>
                     <div className='flex items-center '>
-                        <div class="w-10 h-10 rounded-full dark:bg-gray-300 bg-gray-600 text-white dark:text-gray-600 flex items-center justify-center font-semibold uppercase mr-2">
+                        <div className="w-10 h-10 rounded-full dark:bg-gray-300 bg-gray-600 text-white dark:text-gray-600 flex items-center justify-center font-semibold uppercase mr-2">
                             {user.name[0]}
                         </div>
                         <img src={assets.dropdown_icon} alt={assets.dropdown_icon} className='w-3'/>
