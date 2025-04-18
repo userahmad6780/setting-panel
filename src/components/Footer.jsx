@@ -8,7 +8,10 @@ function Footer() {
   return (
     <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 pb-10  mt-40 text-sm'>
         <div className='text-gray-600 dark:text-white'>
-            <img className="w-[150px] pb-5" src={assets.logo} alt='app_logo'/>
+            <div className='flex items-center pb-5'>
+                <img className="w-[40px]" src={assets.logo} alt='app_logo'/>
+                <span className='px-2 text-gray-800 dark:text-white font-bold text-2xl'>OpenSea</span>
+            </div>
             <p className='w-full md:w-2/3 text-sm'>{t('footer_description')}</p>
         </div>
         <div className='text-gray-600 dark:text-white'>

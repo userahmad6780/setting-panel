@@ -42,8 +42,9 @@ function AppBar() {
 
   return (
     <div className='hidden md:flex justify-between items-center py-5 px-4 sm:px-[10%] absolute inset-x-0 top-0 z-50'>
-        <div>
-            <img className="" src={assets.logo} alt='app_logo'/>
+        <div className='flex items-center'>
+            <img className="w-[40px]" src={assets.logo} alt='app_logo'/>
+            <span className='px-2 text-gray-800 dark:text-white font-bold text-2xl'>OpenSea</span>
         </div>
         <div>
             <ul className={`flex gap-3 font-semibold text-gray-800 dark:text-white`}>

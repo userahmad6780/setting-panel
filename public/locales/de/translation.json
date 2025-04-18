@@ -1,54 +1,57 @@
 {
-    "home": "Startseite",
-    "products": "Produkte",
-    "about_us": "Über uns",
-    "contact_us": "Kontakt",
-    "privacy_policy": "Datenschutzrichtlinie",
-  
-    "signUp": "Registrieren",
-    "signIn": "Anmelden",
-    "signIn_description": "Melden Sie sich bei Ihrem Konto an",
-    "logout": "Abmelden",
-  
-    "name": "Name",
-    "password": "Passwort",
-    "forgot_password": "Passwort vergessen?",
-    "create_new_description": "Neues Konto erstellen?",
-    "click_here": "Klicken Sie hier",
-  
-    "contact_information": "KONTAKTINFORMATIONEN",
-    "basic_information": "GRUNDBEITRÄGE",
-  
-    "gender": "Geschlecht",
-    "birthday": "Geburtstag",
-    "not_selected": "Nicht ausgewählt",
-    "my_profile": "Mein Profil",
-    "edit": "Bearbeiten",
-    "save_information": "Informationen speichern",
-  
-    "home__read_more_title": "Tauchen Sie ein in eine Welt, in der Fantasie auf Innovation trifft",
-    "home__read_more": "Mehr erfahren",
-    "home__title": "Erleben Sie die Welle digitaler Kunstfertigkeit",
-    "home__subHeading": "Verwandeln Sie Ihre Kreativität in digitale Sammlerstücke, teilen Sie Ihre Vision mit einem globalen Publikum, treten Sie in die Zukunft ein – werden Sie ein NFT.",
-  
-    "get_started": "Jetzt starten",
-    "learn_more": "Mehr erfahren",
-  
-    "footer_description": "NFTs ermöglichen es Künstlern und Kreativen, ihre digitalen Werke wie nie zuvor zu besitzen, zu verkaufen und zu teilen. Jeder Token ist ein einzigartiges Asset, gesichert auf der Blockchain. Von Kunst und Musik bis hin zu Momenten und Memes – alles kann ein NFT werden. Schließen Sie sich der Revolution an und verwandeln Sie Ihre Kreativität in bleibenden Wert.",
-    "footer_company": "UNTERNEHMEN",
-    "footer_get_in_touch": "KONTAKTIERE UNS",
-  
-    "info_number": "+92842492349230",
-    "info_email": "prescripto@gmail.com",
-  
-    "remove": "Entfernen",
-  
-    "empty_cart": "Produkte nicht gefunden",
-    "empty_cart_description": "Fügen Sie Artikel zum Warenkorb hinzu, um sie zu kaufen",
-  
-    "subtotal": "Zwischensumme",
-    "subtotal_description": "Versandkosten und Steuern werden an der Kasse berechnet.",
-  
-    "checkout": "Zur Kasse",
-    "continue": "Weiter einkaufen"
-  }  
+  "home": "Startseite",
+  "products": "Produkte",
+  "about_us": "Über uns",
+  "contact_us": "Kontakt",
+  "privacy_policy": "Datenschutzrichtlinie",
+
+  "signUp": "Registrieren",
+  "signIn": "Anmelden",
+  "signIn_description": "Melden Sie sich bei Ihrem Konto an",
+  "logout": "Abmelden",
+
+  "name": "Name",
+  "password": "Passwort",
+  "forgot_password": "Passwort vergessen?",
+  "create_new_description": "Ein neues Konto erstellen?",
+  "click_here": "Hier klicken",
+
+  "contact_information": "KONTAKTINFORMATIONEN",
+  "basic_information": "GRUNDINFORMATIONEN",
+  "profile_updated": "Profil erfolgreich aktualisiert",
+
+  "gender": "Geschlecht",
+  "birthday": "Geburtstag",
+  "not_selected": "Nicht ausgewählt",
+  "my_profile": "Mein Profil",
+  "edit": "Bearbeiten",
+  "save_information": "Informationen speichern",
+
+  "home__read_more_title": "Tauchen Sie ein in eine Welt, in der Fantasie auf Innovation trifft",
+  "home__read_more": "Mehr erfahren",
+  "home__title": "Fangen Sie die Welle der digitalen Kunst ein",
+  "home__subHeading": "Verwandeln Sie Ihre Kreativität in digitale Sammlerstücke. Teilen Sie Ihre Vision mit einem globalen Publikum. Betreten Sie die Zukunft – werden Sie ein NFT.",
+
+  "get_started": "Jetzt loslegen",
+  "learn_more": "Mehr erfahren",
+
+  "footer_description": "NFTs ermöglichen es Künstlern und Kreativen, ihr digitales Werk wie nie zuvor zu besitzen, zu verkaufen und zu teilen. Jeder Token ist ein einzigartiges Asset, das auf der Blockchain gesichert ist – von Kunst und Musik bis hin zu Momenten und Memes – alles kann ein NFT werden. Mach mit bei der Revolution und verwandle deine Kreativität in bleibenden Wert.",
+  "footer_company": "UNTERNEHMEN",
+  "footer_get_in_touch": "KONTAKTIEREN SIE UNS",
+
+  "info_number": "+92842492349230",
+  "info_email": "prescripto@gmail.com",
+
+  "remove": "Entfernen",
+
+  "empty_cart": "Keine Produkte gefunden",
+  "empty_cart_description": "Fügen Sie Artikel zum Warenkorb hinzu, um sie zu kaufen",
+  "added_to_cart": "Artikel zum Warenkorb hinzugefügt",
+  "removed_from_cart": "Artikel aus dem Warenkorb entfernt",
+
+  "subtotal": "Zwischensumme",
+  "subtotal_description": "Versand und Steuern werden beim Checkout berechnet.",
+
+  "checkout": "Zur Kasse",
+  "continue": "Weiter einkaufen"
+}

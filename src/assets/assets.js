@@ -1,5 +1,5 @@
 import profile_pic from './profile_pic.png'
-import logo from './logo.svg'
+import logo from './opensea.svg'
 import dropdown_icon from './dropdown_icon.svg'
 import arrow_icon from './arrow_icon.svg'
 import pk_flg_icon from './pakistan_flag.png'
