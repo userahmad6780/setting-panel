@@ -2,12 +2,13 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart, updateTotal } from '../redux/actions/products';
 import { useNavigate } from 'react-router-dom';
-import { nfts } from '../assets/assets';
+import { useTranslation } from 'react-i18next';
 
 function Cart() {
   const navigate = useNavigate();
   const dispatch = useDispatch()
   const { cartItems, subTotal } = useSelector((state) => state.cartProducts);
+  const { t } = useTranslation();
 
   function handleRemoveCartItem(selectedItem){
     let filteredItems = cartItems.filter(item=> item._id !== selectedItem._id)
@@ -16,10 +17,6 @@ function Cart() {
     dispatch(removeFromCart(filteredItems))
   }
 
-useEffect(()=>{
-    console.log(cartItems, 'reducer --------------------CART------------------- item')
-  },[cartItems])
-
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">
       <div className="mx-auto max-w-3xl pt-16 sm:pt-20 lg:pt-36">
@@ -27,17 +24,17 @@ useEffect(()=>{
             cartItems.length == 0 ?
             <div className="text-center">
                 <h1 className="mt-4 text-5xl font-semibold tracking-tight text-balance text-gray-900 dark:text-white sm:text-7xl">
-                    Products not found
+                    {t('empty_cart')}
                 </h1>
                 <p className="mt-6 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-                    Add items to cart for purchase
+                    {t('empty_cart_description')}
                 </p>
                 <button
                     type="button"
                     onClick={() => navigate('/products')}
                     className="mt-2 font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer"
                     >
-                        Continue Shopping
+                        {t('continue')}
                         <span aria-hidden="true"> &rarr;</span>
                 </button>
             </div> :
@@ -61,7 +58,7 @@ useEffect(()=>{
                                     <p className="text-gray-500">Qty 1</p>
                                     <div className="flex">
                                         <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer" onClick={()=>{handleRemoveCartItem(item)}}>
-                                            Remove
+                                            {t('remove')}
                                         </button>
                                     </div>
                                 </div>
@@ -72,16 +69,16 @@ useEffect(()=>{
     
                 <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                     <div className="flex justify-between text-base font-medium text-gray-900">
-                        <p>Subtotal</p>
+                        <p>{t('subtotal')}</p>
                         <p>${subTotal}</p>
                         </div>
-                        <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                        <p className="mt-0.5 text-sm text-gray-500">{t('subtotal_description')}</p>
                         <div className="mt-6">
                         <a
                             href="#"
                             className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-xs hover:bg-indigo-700"
                         >
-                            Checkout
+                            {t('checkout')}
                         </a>
                         </div>
                         <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
@@ -92,7 +89,7 @@ useEffect(()=>{
                             onClick={() => navigate('/products')}
                             className="font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer"
                             >
-                                Continue Shopping
+                                {t('continue')}
                                 <span aria-hidden="true"> &rarr;</span>
                             </button>
                         </p>

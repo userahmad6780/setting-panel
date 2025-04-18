@@ -21,5 +21,16 @@
     "footer_get_in_touch": "GET IN TOUCH",
 
     "info_number": "+92842492349230",
-    "info_email": "prescripto@gmail.com"
+    "info_email": "prescripto@gmail.com",
+
+    "remove": "Remove",
+
+    "empty_cart": "Products not found",
+    "empty_cart_description": "Add items to cart for purchase",
+
+    "subtotal": "Subtotal",
+    "subtotal_description": "Shipping and taxes calculated at checkout.",
+
+    "checkout": "Checkout",
+    "continue": "Continue Shoping"
 }

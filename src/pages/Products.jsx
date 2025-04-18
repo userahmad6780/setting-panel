@@ -13,7 +13,6 @@ const Products = () => {
     let totalAmount = subTotal + item.price
     dispatch(updateTotal(totalAmount))
     dispatch(addToCart(item))
-    console.log(item, 'local ---------- current item')
   }
 
   function handleRemoveCartItem(selectedItem){
@@ -22,10 +21,6 @@ const Products = () => {
       dispatch(updateTotal(totalAmount))
       dispatch(removeFromCart(filteredItems))
   }
-
-  useEffect(()=>{
-    console.log(cartItems, 'reducer --------- item')
-  },[cartItems])
 
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">

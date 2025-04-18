@@ -4,22 +4,34 @@
     "about_us": "Über uns",
     "contact_us": "Kontakt",
     "privacy_policy": "Datenschutzrichtlinie",
-
+  
     "signUp": "Registrieren",
     "signIn": "Anmelden",
-
+  
     "home__read_more_title": "Tauche ein in eine Welt, in der Fantasie auf Innovation trifft",
     "home__read_more": "Mehr erfahren",
-    "home__title": "Erlebe die Welle digitaler Kunst",
-    "home__subHeading": "Verwandle deine Kreativität in digitale Sammlerstücke Teile deine Vision mit einem weltweiten Publikum Tritt in die Zukunft ein – werde ein NFT.",
-
-    "get_started": "Loslegen",
+    "home__title": "Erlebe die Welle digitaler Kunstfertigkeit",
+    "home__subHeading": "Verwandle deine Kreativität in digitale Sammlerstücke, teile deine Vision mit einem globalen Publikum, trete in die Zukunft ein – werde ein NFT.",
+  
+    "get_started": "Jetzt starten",
     "learn_more": "Mehr erfahren",
-
-    "footer_description": "NFTs ermöglichen es Künstlern und Kreativen, ihre digitalen Werke wie nie zuvor zu besitzen, zu verkaufen und zu teilen. Jeder Token ist ein einzigartiges Gut, gesichert auf der Blockchain. Von Kunst und Musik bis hin zu Momenten und Memes – alles kann ein NFT werden. Mach mit bei der Revolution und verwandle deine Kreativität in bleibenden Wert.",
+  
+    "footer_description": "NFTs ermöglichen es Künstlern und Kreativen, ihre digitalen Werke wie nie zuvor zu besitzen, zu verkaufen und zu teilen. Jeder Token ist ein einzigartiges Asset, gesichert auf der Blockchain. Von Kunst und Musik bis hin zu Momenten und Memes – alles kann ein NFT werden. Schließe dich der Revolution an und verwandle deine Kreativität in bleibenden Wert.",
     "footer_company": "UNTERNEHMEN",
-    "footer_get_in_touch": "KONTAKT AUFNEHMEN",
-
+    "footer_get_in_touch": "KONTAKTIERE UNS",
+  
     "info_number": "+92842492349230",
-    "info_email": "prescripto@gmail.com"
+    "info_email": "prescripto@gmail.com",
+  
+    "remove": "Entfernen",
+  
+    "empty_cart": "Produkte nicht gefunden",
+    "empty_cart_description": "Füge Artikel zum Warenkorb hinzu, um sie zu kaufen",
+  
+    "subtotal": "Zwischensumme",
+    "subtotal_description": "Versandkosten und Steuern werden an der Kasse berechnet.",
+  
+    "checkout": "Zur Kasse",
+    "continue": "Weiter einkaufen"
 }
+  
