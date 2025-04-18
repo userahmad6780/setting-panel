@@ -1,7 +1,7 @@
 import { THEME_MODE } from "../actions/theme";
 
 const initialState = {
-    isDarkMode: false
+    isDarkMode: null
   };
   
   export const themeReducer = (state = initialState, action) => {
